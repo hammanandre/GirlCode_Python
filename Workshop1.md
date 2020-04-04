@@ -85,8 +85,98 @@ After the keyword and inside the () sytax you can define a local variable that a
 ```python
 def feed(cre):
     cre['hungry'] = False
+    cre['weight'] = cre['weight'] + 0.5
     
 print(creature)
 feed(creature)
 print(creature)
+```
+
+We now have a basic Tamagotchi:
+```python
+creature = {
+  'name': 'Fluffy',
+  'hungry': True,
+  'weight': 9.5,
+  'age': 5,
+  'photo': '(=^o.o^=)_',
+}
+
+def feed(cre):
+    cre['hungry'] = False
+    cre['weight'] = cre['weight'] + 0.5
+    
+print(creature['name'] + "says hi!")
+print(creature)
+feed(creature)
+print(creature)
+```
+
+Let's make it abit smarter by introducing some logic into what our creature can do. 
+One of the most basic logic components is to compare things. 
+In python we can use a check if a specific condition is met and then do something if it is or not. 
+
+The syntax for this comparison looks like this:
+```python
+def feed(cre):
+  if cre['hungry'] == True:
+    cre['hungry'] = False
+    cre['weight'] = cre['weight'] + 0.5
+  else:
+    print ('The creature is not hungry!')
+    cre['weight'] = cre['weight'] + 0.5
+    
+```
+
+The syntax is very similar to the def keywords just with diffrent keywords and without the () for a local variable.
+
+Another type of collection variable like what the Dictionary does is a list, but where a Dictionary can contain a selection of diffrent variables and their values a list contains a selection of values at diffrent indexes. 
+
+A List is define with the syntax:
+
+Name = [var1,var2]
+
+A useful way to go through the values in a List is using one of the Loops in Pyhton, a For loop does the same thing for every instance of something in a collection. 
+
+The syntax for a For loop is:
+
+for localvarName in Collection:
+
+
+Applying these new concepts to our creature we end up with:
+```python
+creature_1 = {
+  'name': 'Fluffy',
+  'hungry': True,
+  'weight': 9.5,
+  'age': 5,
+  'photo': '(=^o.o^=)_',
+}
+
+creature_2 = {
+    'name': 'Rat',
+    'age': 6,
+    'weight': 1.5,
+    'hungry': False,
+    'photo': '<:3 )~~~~',
+}
+
+creatures = [creature_1, creature_2]
+
+def feed(creature):
+  if creature['hungry'] == True:
+    creature['hungry'] = False
+    creature['weight'] = creature['weight'] + 0.5
+  else:
+    print ('The creature is not hungry!')
+    creature['weight'] = creature['weight'] + 1
+
+for creature in creatures:
+    print ('------------------------------')
+    print ('Hello ' + creature['name'] + '!')
+    print (creature['photo'])
+    print ('Weight: ' + str(creature['weight']))
+    feed(creature)
+    print ('Weight: ' + str(creature['weight']))
+    print ('------------------------------')    
 ```
