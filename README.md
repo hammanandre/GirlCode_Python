@@ -7,7 +7,7 @@
 
 ## [Workshop 1](https://github.com/hammanandre/GirlCode_Python_One/blob/master/Workshop1.md)
 This Workshop takes inspiration from: https://www.thinkful.com/learn/intro-to-python-tutorial
-### Goal
+### Workshop Goal
 The workshop hopes to serve as an introduction to the basics of Python in a beginner friendly fashion that illustrates how to create the basic data structures available in Python as well as how to interact with them. This workshop also shows how to save these data structures to a local file and interact with a Python application using command line commands. 
 
 
