@@ -10,3 +10,11 @@ The end product of this workshop is a basic code toy similar to a tamagotchi pro
 
 
 The “player” will have a “virtual creature” expressed in data that is saved to a local file and they can type basic commands to the application to interact with these data structures and generates a result that in turn gets updated in the local storage file.
+
+## Requirements
+- Python 3.x
+- A text editor of some kind, any will do. ([VSCode is cool](https://code.visualstudio.com/ "VSCode is cool"))
+
+
+## Steps
+- [Step 1](https://github.com/hammanandre/GirlCode_Python_One/blob/master/Step1.md)
