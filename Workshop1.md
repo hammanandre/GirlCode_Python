@@ -180,3 +180,48 @@ for creature in creatures:
     print ('Weight: ' + str(creature['weight']))
     print ('------------------------------')    
 ```
+## Interaction
+
+Now that we have a creature or two lets start adding some interactions with our creatures. 
+
+Python has a function that lets you provide a prompt and then return to you a string to use.
+
+The syntax for this is:
+
+```python
+var = input("prompt")
+```
+
+We can also convert variables from one type to another, say we have a string (a collection of characters) to an intager (a whole number) the all we do is use pythons built in conversion functions. 
+
+The syntax for this is:
+
+```python
+int(stringvar)
+float(stringvar)
+```
+
+Most of Pythons built in data types also have functions attached to them. 
+
+For example a string can be made all uppercase by adding a .upper() after and you can add a value to a list with an .append(var) descriptions and more examples can be found in the [Python docs](https://docs.python.org/3.8/library/index.html)
+
+Baring these options in mind we can make a function that adds values to our creature options
+
+```python
+def AddCreature():
+    print("Let's add a new pypet!")
+    NewCreature = {}
+    NewCreature['name'] = input("What is the new pet called? ")
+    NewCreature['age'] = int(input("How old is the pet? "))
+    NewCreature['weight'] = float(input("What does the pet weigh? "))
+    NewCreature['hungry'] = True
+    NewCreature['photo'] = input("What does the pet look like? ")
+    creatures.append(NewCreature)
+```
+
+And we make this happen optionally using more of these new concepts:
+
+```python
+if input("Do you want to add a new Creature? [Y/N]").upper() == "Y" :
+    AddCreature()
+```
