@@ -16,5 +16,5 @@ The “player” will have a “virtual creature” expressed in data that is sa
 - A text editor of some kind, any will do. ([VSCode is cool](https://code.visualstudio.com/ "VSCode is cool"))
 
 
-## Steps
-- [Step 1](https://github.com/hammanandre/GirlCode_Python_One/blob/master/Step1.md)
+## Workshops
+- [Workshop 1](https://github.com/hammanandre/GirlCode_Python_One/blob/master/Workshop1.md)
