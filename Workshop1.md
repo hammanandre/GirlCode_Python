@@ -1,17 +1,92 @@
 # Workshop 1
 ## Goals
+The workshop hopes to serve as an introduction to the basics of Python in a beginner friendly fashion that illustrates how to create the basic data structures available in Python as well as how to interact with them. This workshop also shows how to save these data structures to a local file and interact with a Python application using command line commands. 
+
+
+The end product of this workshop is a basic code toy similar to a tamagotchi program.
+
+
+The “player” will have a “virtual creature” expressed in data that is saved to a local file and they can type basic commands to the application to interact with these data structures and generates a result that in turn gets updated in the local storage file.
+
 - Setup a basic Python 3.X environment 
 - Write a Hello World 
 - Write a Tamagotchi Application
 ## First steps 
 1. [Download](https://www.python.org/downloads/) the latest version of Python 3.X 
-2. Install python making sure to tick the Add to Path option
+2. Install python making sure to tick the Add to Path option.
 3. Make a new file called helloworld.py 
 ```python
 print("Hello world!")
 ```
-4. In a console in the same folder as the file run the file by typing
+4. In a console in the same folder as the file run the file by typing.
 
 \>Python .\helloworld.py 
 
-If you recieve a Hello world! message in the console your setup is correct and everything is functional
+If you recieve a Hello world! message in the console your setup is correct and everything is functional.
+
+## A Creature
+- Create a new file called pet.py
+
+To build a creature we'll have to have some values that describe the attributes of the creature. 
+Some of the basic values we'll use are intagers that are whole numbers,
+
+floats that are fractions,
+
+strings that is a set of characters
+
+and Booleans that are a binary true or false value.
+
+
+A variable in Python is defined by defining the variable name then a "=" and the value.
+
+Variables in Python are not limited to a specific type, you can change the type of value inside of a variable by simply overriding it the same way you define a variable. 
+
+A basic creature would be defined as:
+
+```python
+name = 'Fluffy'
+age = 5
+weight = 9.5
+hungry = True
+photo = '(=^o.o^=)__'
+```
+
+As variables contain a value, you can use those values by simply referring to the name of the variable like so.
+```python
+print(name + "says hi!")
+print(photo)
+```
+
+Try run your new script the same way you ran your helloworld.py script but referring to the new file. 
+
+A dictionary is another variable type that can hold a selection of diffrent variables and effectively group them as one object.
+Variables defined inside a dictionary uses colons instead of equals signs to define their values. 
+
+```python
+creature = {
+  'name': 'Fluffy',
+  'hungry': True,
+  'weight': 9.5,
+  'age': 5,
+  'photo': '(=^o.o^=)_',
+}
+```
+
+Similarly accessing the values inside of Dictionary you have to specifically refer to the dictionary itself when getting the value of the variable. 
+
+```python
+print(creature['name'] + "says hi!")
+print(creature['photo'])
+print(creature)
+```
+
+We can also prepackage behaviours as functions. You define functions using the def key word.
+After the keyword and inside the () sytax you can define a local variable that allows you to pass variables into the function. 
+```python
+def feed(cre):
+    cre['hungry'] = False
+    
+print(creature)
+feed(creature)
+print(creature)
+```
