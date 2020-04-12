@@ -25,7 +25,7 @@ print("Hello world!")
 If you recieve a Hello world! message in the console your setup is correct and everything is functional.
 
 ## A Creature
-- Create a new file called pet.py
+- Create a new file called creature.py
 
 To build a creature we'll have to have some values that describe the attributes of the creature. 
 Some of the basic values we'll use are intagers that are whole numbers,
@@ -209,13 +209,13 @@ Baring these options in mind we can make a function that adds values to our crea
 
 ```python
 def AddCreature():
-    print("Let's add a new pypet!")
+    print("Let's add a new pycreature!")
     NewCreature = {}
-    NewCreature['name'] = input("What is the new pet called? ")
-    NewCreature['age'] = int(input("How old is the pet? "))
-    NewCreature['weight'] = float(input("What does the pet weigh? "))
+    NewCreature['name'] = input("What is the new creature called? ")
+    NewCreature['age'] = int(input("How old is the creature? "))
+    NewCreature['weight'] = float(input("What does the creature weigh? "))
     NewCreature['hungry'] = True
-    NewCreature['photo'] = input("What does the pet look like? ")
+    NewCreature['photo'] = input("What does the creature look like? ")
     creatures.append(NewCreature)
 ```
 
