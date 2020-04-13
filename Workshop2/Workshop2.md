@@ -285,7 +285,7 @@ from os import system
 system('cls')
 ```
 
-# ERATA
+# Erratum
 
 During my workshop I gave on the video there was a problem with the load and saving of data that I got stuck on for a while and ended up saying I will cover in my notes. 
 
