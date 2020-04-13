@@ -8,7 +8,7 @@ class Creature:
         if self.data['hungry'] == True:
             self.data['hungry'] = False
             self.data['weight'] = self.data['weight'] + 1
-            print ('omnomom!!')
+            print (self.data['name'] +' says omnomom!!')
         else:
             print (self.data['name']+' is not hungry!')
 

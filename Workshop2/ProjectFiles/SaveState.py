@@ -2,9 +2,12 @@ import json
 from Creature import Creature
 
 class Saver:
-    def save(self,data):
+    def save(self):
         fp = open('save.json','w')
-        json.dump(data,fp)
+        creatureSaveData = []
+        for creature in self.data:
+            creatureSaveData.append(creature.data)
+        json.dump(creatureSaveData,fp)
         print('Saved Data')
     def load(self):
         try:
@@ -17,4 +20,4 @@ class Saver:
             print ('Loaded your saved data')
         except FileNotFoundError:
             print('No save files exist created new data')
-            self.data = [{'name': "Fluffy",'age': 3,'weight': 2.4,'hungry': True,'photo': "(=^O.O^=)_"}]
+            self.data = [Creature({'name': "Fluffy",'age': 3,'weight': 2.4,'hungry': True,'photo': "(=^O.O^=)_"})]

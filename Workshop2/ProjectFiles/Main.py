@@ -10,8 +10,11 @@ class CreatureManager(Saver):
         print('------------------------------')
         print('Welcome to my creatures!')
         print('------------------------------')
+        self.show()
     def show(self):
         print (self.data)
+        for creature in self.data:
+            print(creature.data)
     def AddCreature(self):
         print("Let's add a new Creature!")
         NewPet = {}
@@ -21,10 +24,13 @@ class CreatureManager(Saver):
         NewPet['hungry'] = True
         NewPet['photo'] = input("What does the pet look like? ")
         self.data.append(Creature(NewPet))
-        #self.save(self.data)
+        self.show()
+        self.save()
     def FeedPets(self):
+        self.show()
         for creature in self.data:
             creature.feed()
+        self.save()
 
 
 
@@ -35,7 +41,7 @@ while QuitApp:
         manager.AddCreature()
     manager.FeedPets()
     sleep(2)
-    system('cls')
+    # system('cls')
     if input('Do you want to quit [Y/N]').upper() == "Y":
         QuitApp = False
 
