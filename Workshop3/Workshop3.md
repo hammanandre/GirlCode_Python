@@ -156,10 +156,29 @@ print(millimeters.shape)
 
 millimeters.shape shows us there is 365 entries, one for each day in out array.
 
-Lets display this data in a graph, for that we'll use another package called matplotlib to plot our graph.
+Lets display this data in a graph, for that we'll use another package called matplotlib to plot our graph. We'll go into detail about matplotlib next workshop
 
 ```
 pip install matplotlib
 pip install seaborn
 ```
 
+Now lets use matplotlib to plot our data
+
+```python
+import matplotlib.pyplot as plt
+import seaborn; seaborn.set()  # set plot styles
+...
+plt.hist(millimeters, 40)
+plt.show()
+```
+
+Using the summery keyword in numpy we can calculate some statisics on this data:
+
+```python
+print("Number days without rain:      ", np.sum(millimeters == 0))
+print("Number days with rain:         ", np.sum(millimeters != 0))
+print("Days with more than 5 mm :", np.sum(millimeters > 5))
+print("Rainy days with < 5 mm  :", np.sum((millimeters > 0) &
+                                                (millimeters < 5)))
+```
