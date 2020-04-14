@@ -150,7 +150,7 @@ import pandas as pd
 
 # using pandas extract the rainfall in inches as a NumPy array from the file
 rainfall = pd.read_csv('Seattle2014.csv')['PRCP'].values
-millimeters = rainfall * 10  # 1/10mm -> mm
+millimeters = rainfall / 10  # 1/10mm -> mm
 print(millimeters.shape)
 ```
 
