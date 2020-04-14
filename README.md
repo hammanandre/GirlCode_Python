@@ -10,3 +10,6 @@ This Workshop takes inspiration from: https://www.thinkful.com/learn/intro-to-py
 
 ## [Workshop 2](https://github.com/hammanandre/GirlCode_Python/blob/master/Workshop2/Workshop2.md)
 This Workshop builds on the previous workshop and introduces Classes and modules
+
+## [Workshop 3](https://github.com/hammanandre/GirlCode_Python/blob/master/Workshop3/Workshop3.md)
+This workshop introduces numpy and data handling in Python
