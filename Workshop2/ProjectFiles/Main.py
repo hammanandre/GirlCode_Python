@@ -41,7 +41,7 @@ while QuitApp:
         manager.AddCreature()
     manager.FeedPets()
     sleep(2)
-    # system('cls')
+    system('cls')
     if input('Do you want to quit [Y/N]').upper() == "Y":
         QuitApp = False
 
