@@ -179,6 +179,20 @@ Using the summery keyword in numpy we can calculate some statisics on this data:
 print("Number days without rain:      ", np.sum(millimeters == 0))
 print("Number days with rain:         ", np.sum(millimeters != 0))
 print("Days with more than 5 mm :", np.sum(millimeters > 5))
-print("Rainy days with < 5 mm  :", np.sum((millimeters > 0) &
-                                                (millimeters < 5)))
+print("Rainy days with < 5 mm  :", np.sum((millimeters > 0) & (millimeters < 5)))
+```
+The summeries we created we created using some bool masks.
+
+Applying a conditional to an array in numpy return an array of bools based on the condition. 
+These masks can then be used on an array using a [] notation. 
+
+```python
+rainy = (millimeters>0)
+days = np.arange(365)
+summer = (days>172) & (days < 262)
+
+print("Median of rain amount (mm): ",np.median(millimeters[rainy]))
+print("Median of rain during summer(mm): ",np.median(millimeters[summer]))
+print("Median of rain during nonsummer rainy days: ",np.median(millimeters[rainy & ~summer]))
+print("Maximum amount of rain we got during summer:",np.max(millimeters[summer]))
 ```
