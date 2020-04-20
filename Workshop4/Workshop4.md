@@ -165,4 +165,110 @@ So lets go back to our creatures example, if we wanted a single object with all 
 name = ['Cat', 'mouse', 'Fluffy', 'Whiskers']
 age = [5, 4, 11, 34]
 weight = [12.0, 5.5, 23.0, 45.5]
+
+x = np.zeros(4, dtype=int) # make a numpy array that's empty of type int
+
+
+dataformat = {'names':('name', 'age', 'weight'), 'formats':('U10', 'i4', 'f8')}
+# make empty numpy structrued array
+data = np.zeros(4, dtype=dataformat)
+print(data.dtype)
+
+```
+
+As you saw there our data type has some intresting formats in, those are just the shorthand for this and you can use the short hand as well instead of a string
+```
+
+'b'	Byte	                np.dtype('b')
+'i'	Signed integer	        np.dtype('i4') == np.int32
+'u'	Unsigned integer	    np.dtype('u1') == np.uint8
+'f'	Floating point	        np.dtype('f8') == np.int64
+'c'	Complex floating point	np.dtype('c16') == np.complex128
+'U'	Unicode string	        np.dtype('U') == np.str_
+'V'	Raw data (void)	        np.dtype('V') == np.void
+```
+
+Once we have the new numpy structured array we can just assign the data into it
+```python
+data['name'] = name
+data['age'] = age
+data['weight'] = weight
+print(data)
+
+# we can now interact with this object as you would normally
+# it doesn't make much sense in this small example but it woul be very useful in large data sets
+
+# Get all names
+data['name']
+
+# Get first row of data
+data[0]
+
+# Get the name from the last row
+data[-1]['name']
+
+# even the boolean masks we looked at last workshop works in here
+# Get names where age is under 30
+data[data['age'] < 30]['name']
+```
+
+## Onto Pandas
+
+Pandas objects are basically a Numpy Structured array but instead of having numbers for rows and colomns we can be indexing on labels, making it much more human friendly.
+Pandas also has a series of helper functions and tools and builtin features that just make everything a bit more human friendly.
+
+We'll start off with two Pandas concepts, a Series and a Dataframe. 
+
+A Pandas series is a one-dimensional array of data that has indexes. 
+
+
+First lets make sure to import our pandas
+
+```python 
+import numpy as np
+import pandas as pd
+
+import numpy as np 
+import pandas as pd 
+
+data = pd.Series(np.arange(5))
+print(data)
+print(data.values)
+print(data.index)
+```
+
+As you can see the pandas series sofar just looks like a normal array, but the magic comes in with you can replace the index with anything
+
+```python 
+data = pd.Series([0, 1, 2, 3],index=['a', 'b', 'c', 'd'])
+print (data)
+
+# you'd now index on your new index values to get the values
+print (data['a'])
+```
+
+A Pandas Series is almost analagous to a Python Dictionary, in fact you can create a Series from a dictionary. 
+
+```python 
+population_dict = {'California': 38332521,
+                   'Texas': 26448193,
+                   'New York': 19651127,
+                   'Florida': 19552860,
+                   'Illinois': 12882135}
+population = pd.Series(population_dict)
+print(population)
+```
+
+Now if a Series is a Single Dimensional array then a DataFrame in Pandas is a multi-Dimensional array equivelant.
+Lets add some more data into the mix and make a second series with the area and then put the two series into a DataFrame
+
+```python 
+area_dict = {'California': 423967, 'Texas': 695662, 'New York': 141297,
+             'Florida': 170312, 'Illinois': 149995}
+area = pd.Series(area_dict)
+print(area)
+
+states = pd.DataFrame({'population': population,
+                       'area': area})
+print(states)
 ```
