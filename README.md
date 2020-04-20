@@ -14,5 +14,5 @@ This Workshop builds on the previous workshop and introduces Classes and modules
 ## [Workshop 3](https://github.com/hammanandre/GirlCode_Python/blob/master/Workshop3/Workshop3.md)
 This workshop introduces numpy and data handling in Python
 
-## [Workshop 4](https://github.com/hammanandre/GirlCode_Python/blob/master/Workshop3/Workshop4.md)
+## [Workshop 4](https://github.com/hammanandre/GirlCode_Python/blob/master/Workshop4/Workshop4.md)
 This workshop continues with numpy 
