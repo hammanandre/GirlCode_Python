@@ -140,3 +140,29 @@ x_copy = x[:2,:2].copy()
 In the last example of the subarray section we wanted an array with 3 rows and 4 colombs so we used reshape to do that. Reshape is a very versatile way to reshape arrays, but do note you want to keep the collection the same size as the reshaped array. 
 
 Similar to the subarray/array slicing reshape recreates a no-copy "view" of your data, so it's very versatile and light. 
+
+## [Broadcasting arrays](https://jakevdp.github.io/PythonDataScienceHandbook/06.00-figure-code.html#Broadcasting)
+
+Broadcasting arrays basically refer to the use of these "views" that we spoke of earlier to perform the very fast numpy functionalities on a set of arrays of diffrent sizes. 
+
+
+For this section we are gonna use a [cool script](https://jakevdp.github.io/PythonDataScienceHandbook/06.00-figure-code.html#Broadcasting) someone else made and we are gonna put it in a file and run it, it will use numpy and matplotlib to save us a diagram that show how broadcasting works. (Refer to diagram and explaination in video for this workshop.) 
+
+So what can we use this for:
+- a host of statistical and experiment data organinisation things. 
+- remapping data base values
+- plotting functions
+
+I found a cool example of plotting a function [here](https://jakevdp.github.io/PythonDataScienceHandbook/04.04-density-and-contour-plots.html) if you want to check it out but I will do data visualisation in an upcoming workshop.
+
+## Numpy's Structured Arrays
+
+Numpy's structured arrays is a way to store ompound and heterogeneous data effeciently, the numpy docs mention ["Structured datatypes are designed to be able to mimic ‘structs’ in the C language, and share a similar memory layout. They are meant for interfacing with C code and for low-level manipulation of structured buffers"](https://numpy.org/doc/stable/user/basics.rec.html?highlight=structured%20array#module-numpy.doc.structured_arrays) as such Pandas are much closer matched to what we will be doing but I'll quickly run over structured arrays with a few example cases in these notes incase they help.
+
+So lets go back to our creatures example, if we wanted a single object with all the data in it that wasn't a class but a highly effecient numpy object we'd have this data:
+
+```python
+name = ['Cat', 'mouse', 'Fluffy', 'Whiskers']
+age = [5, 4, 11, 34]
+weight = [12.0, 5.5, 23.0, 45.5]
+```
