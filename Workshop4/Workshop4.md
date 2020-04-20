@@ -157,7 +157,7 @@ I found a cool example of plotting a function [here](https://jakevdp.github.io/P
 
 ## Numpy's Structured Arrays
 
-Numpy's structured arrays is a way to store ompound and heterogeneous data effeciently, the numpy docs mention ["Structured datatypes are designed to be able to mimic ‘structs’ in the C language, and share a similar memory layout. They are meant for interfacing with C code and for low-level manipulation of structured buffers"](https://numpy.org/doc/stable/user/basics.rec.html?highlight=structured%20array#module-numpy.doc.structured_arrays) as such Pandas are much closer matched to what we will be doing but I'll quickly run over structured arrays with a few example cases in these notes incase they help.
+Numpy's structured arrays is a way to store Compound and heterogeneous data effeciently, the numpy docs mention ["Structured datatypes are designed to be able to mimic ‘structs’ in the C language, and share a similar memory layout. They are meant for interfacing with C code and for low-level manipulation of structured buffers"](https://numpy.org/doc/stable/user/basics.rec.html?highlight=structured%20array#module-numpy.doc.structured_arrays) as such Pandas are much closer matched to what we will be doing but I'll quickly run over structured arrays with a few example cases in these notes incase they help.
 
 So lets go back to our creatures example, if we wanted a single object with all the data in it that wasn't a class but a highly effecient numpy object we'd have this data:
 
