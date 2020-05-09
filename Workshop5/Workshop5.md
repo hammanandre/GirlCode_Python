@@ -56,3 +56,4 @@ The feedback will consist on commentary and advice on the way you went about it 
 - [More examples of Timetrackers used by other devs](https://github.com/merveilles/Time-Travelers)
 - [MatplotLib Inputbox](https://matplotlib.org/3.1.1/gallery/widgets/textbox.html)
 - [MatplotLib Button](https://matplotlib.org/3.1.1/gallery/widgets/buttons.html)
+- You do not have to use MatplotLib for your visualisations 
