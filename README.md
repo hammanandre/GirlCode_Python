@@ -16,3 +16,6 @@ This workshop introduces numpy and data handling in Python
 
 ## [Workshop 4](https://github.com/hammanandre/GirlCode_Python/blob/master/Workshop4/Workshop4.md)
 This workshop continues with numpy 
+
+## [Workshop 5](https://github.com/hammanandre/GirlCode_Python/blob/master/Workshop5/Workshop5.md)
+This workshop introduces MatplotLib and provides a Post workshop submission
